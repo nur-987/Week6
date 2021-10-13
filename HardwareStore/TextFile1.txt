@@ -1,0 +1,25 @@
+﻿HardwareStore 
+
+Items
+(StockIntheStore)
+itemId
+itemName
+itemCost
+QuantityinStore
+
+Customer
+customerId
+itemsBought
+
+Admin 
+AdminId
+
+CalculateTotalBill
+
+DisplayItems in the shop 
+
+Buying items = add to list
+
+Adding items into the shop
+only admin
+
