@@ -13,17 +13,19 @@ namespace ReadInputInFile
     /// </summary>
     class Program
     {
+        public static Dictionary<char, int> dict = new Dictionary<char, int>();
+
         static void Main(string[] args)
         {
             Creating();
             Reading();
-
+            CreatingNew();
 
         }
 
         public static void Creating()
         {
-            FileStream fs = new FileStream("InputFile.txt", FileMode.Open, FileAccess.ReadWrite);
+            FileStream fs = new FileStream("InputFile.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             StreamWriter streamWriter = new StreamWriter(fs);
             Console.WriteLine("Enter text");
             var str = Console.ReadLine();
@@ -41,7 +43,7 @@ namespace ReadInputInFile
             sr.BaseStream.Seek(0, SeekOrigin.Begin);
             string str = sr.ReadToEnd();
             string newStr = str.Replace(" ", string.Empty);
-            Dictionary<char, int> dict = new Dictionary<char, int>();
+
             foreach (char chr in newStr)
             {
                 if (dict.ContainsKey(chr))
@@ -54,18 +56,26 @@ namespace ReadInputInFile
                     dict.Add(chr, 1);
                 }
             }
-
-            foreach(var item in dict.Keys)
-            {
-                Console.WriteLine(item + "=" + dict[item]);
-            }
+            Console.WriteLine("completed occurence calculation");
 
             
         }
 
         public static void CreatingNew()
         {
-            //passing the dictionary?
+            FileStream fs = new FileStream("OutputFile.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            StreamWriter streamWriter = new StreamWriter(fs);
+
+            //foreach (var item in dict.Keys)
+            foreach(KeyValuePair<char,int> kvp in dict)
+            {
+                //streamWriter.WriteLine(item + "=" + dict[item]);
+                streamWriter.WriteLine(kvp);
+            }
+            Console.WriteLine("printed result in Output.txt file");
+            streamWriter.Flush();
+            streamWriter.Close();
+            fs.Close();
         }
     }
 }
