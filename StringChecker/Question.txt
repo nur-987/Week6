@@ -1,0 +1,5 @@
+﻿given a string of even length, break the string into 2 equal parts
+check if they are alike. 
+they have the same number of vowels in both parts (case insensitive).
+if they are alike; output = true. 
+else; output = false.

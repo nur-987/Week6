@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace IPaddressCheck
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            if (Check())
+            Console.WriteLine("Enter IP address: ");
+            string ipAddress = Console.ReadLine();
+            Program p = new Program();
+            if (p.Check(ipAddress))
             {
                 Console.WriteLine("Valid");
             }
@@ -22,9 +25,9 @@ namespace IPaddressCheck
             Console.ReadLine();
         }
 
-        public static bool Check()
+        public bool Check(string str)
         {
-            string str = "192.168.A.1";
+            //string str = "192.168.A.1";
             if (str.Any(Char.IsLetter))
             {
                 Console.WriteLine(" Not Valid");

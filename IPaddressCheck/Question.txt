@@ -1,0 +1,6 @@
+﻿Given an IP address string, check if the input string is valid or not.
+a) each segment should only contain interger
+b) there chould be 4 segments only
+c) the vallue of each segment should be between 0 to 255
+
+output: valid string, not valid string

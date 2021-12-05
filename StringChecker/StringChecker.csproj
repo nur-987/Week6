@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D2E1D05-5F8D-45E5-8688-4535548008F1}</ProjectGuid>
+    <ProjectGuid>{CE23F1FB-73FC-4F66-AB07-7A24BD960BC7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ReadInputInFile</RootNamespace>
-    <AssemblyName>ReadInputInFile</AssemblyName>
+    <RootNamespace>StringChecker</RootNamespace>
+    <AssemblyName>StringChecker</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
