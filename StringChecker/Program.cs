@@ -59,7 +59,6 @@ namespace StringChecker
                 }
             }
 
-            bool output = true;
             foreach (KeyValuePair<char, int> keyValuePair in counter)
             {
                 if (keyValuePair.Value != 0)
@@ -69,6 +68,29 @@ namespace StringChecker
 
             }
             return true;
+
+            #region
+            //bool status = true;
+            //foreach (KeyValuePair<char, int> keyValuePair in counter)
+            //{
+            //    if (keyValuePair.Value != 0)
+            //    {
+            //        status = false;
+            //        break;
+            //    }
+
+            //}
+
+            //if (status)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            #endregion
 
         }
     }
